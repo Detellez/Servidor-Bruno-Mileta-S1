@@ -6,20 +6,7 @@
     // ==========================================
     const CEREBRO_URL = 'https://script.google.com/macros/s/AKfycbzd0yXMyFtN3OMLb4bWlbvmifj2ENvQMhcJ_ZdSmuMAVQ6diTnPsAAyfxsDWcJFZpnv/exec';
     
-    // URLs de los Obreros Activos
-    const OBRERO_MEXICO_URL = 'https://script.google.com/macros/s/AKfycbyrFeXKev0JIpuFUo1a2ZCKNwcfnxYBGsmYx3i6CSGe3zdu8YfmRD5CkJ1JIN9OyKprpQ/exec';
-    const OBRERO_PERU_URL = 'https://script.google.com/macros/s/AKfycbxibB4Eb4IALEMu90N7OKGlSxf9gssw0P_FvB4EgB4dKgwM2qk_2enmaBUmz5rybzXPcA/exec';
-    const OBRERO_BRASIL_URL = 'https://script.google.com/macros/s/AKfycbzlv-hk4-xbiKx0yu65RlMHzIYCCTlpV5CGJ4QaAkivwWQ0Jw7TWcUtfOKL7lUJA6E-eA/exec';
-    const OBRERO_COLOMBIA_URL = 'https://script.google.com/macros/s/AKfycbxibB4Eb4IALEMu90N7OKGlSxf9gssw0P_FvB4EgB4dKgwM2qk_2enmaBUmz5rybzXPcA/exec';
-
-    const API_URL = (function() {
-        const href = window.location.href;
-        if (href.includes('mx-crm.certislink.com') || href.includes('variousplan.com')) return OBRERO_MEXICO_URL;
-        if (href.includes('pe-crm.certislink.com')) return OBRERO_PERU_URL;
-        if (href.includes('creddireto.com')) return OBRERO_BRASIL_URL;
-        if (href.includes('co-crm.certislink.com')) return OBRERO_COLOMBIA_URL;
-        return CEREBRO_URL;
-    })();
+    const API_URL = CEREBRO_URL;
 
     // 🛡️ LLAVE MAESTRA DE SEGURIDAD
     const SECURITY_TOKEN = 'SST_V12_CORP_SECURE_2026_X9';
