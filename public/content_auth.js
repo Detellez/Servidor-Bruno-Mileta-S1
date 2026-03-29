@@ -1922,7 +1922,7 @@ function showNotification(message, msgId, type = 'info') {
 
         // 🔥 ESCUDO ANTI-COLAPSO DE GOOGLE (Límites de Cuota)
         const lastGlobalHb = parseInt(localStorage.getItem('LAST_GLOBAL_HB_TS') || '0');
-        const umbral = fromVisibility ? 30000 : 110000; 
+        const umbral = fromVisibility ? 120000 : 240000; 
         if (Date.now() - lastGlobalHb < umbral) {
             return; 
         }
@@ -2108,7 +2108,7 @@ function showNotification(message, msgId, type = 'info') {
     try {
         const workerBlob = new Blob([`
             self.onmessage = function(e) {
-                if(e.data === 'start') setInterval(() => postMessage('tick'), 20000);
+                if(e.data === 'start') setInterval(() => postMessage('tick'), 120000);
             };
         `], { type: 'application/javascript' });
         
@@ -2135,7 +2135,7 @@ function showNotification(message, msgId, type = 'info') {
                 checkLogoutButton();
                 checkRepairButton(); // <--- AÑADIDO
             }
-        }, 20000);
+        }, 120000);
     }
 
     // 🔥 BUCLE DE VIGILANCIA UI 
